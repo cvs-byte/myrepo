@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vastav Sekar | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">VS<span>.</span></a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link btn-contact">Contact Me</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle Menu"><i class="ph ph-list"></i></button>
+            <button id="theme-toggle" aria-label="Toggle Theme">
+                <i class="ph ph-sun theme-icon-light"></i>
+                <i class="ph ph-moon theme-icon-dark"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <p class="greeting">Hi there, I'm</p>
+                <h1 class="name">Cherukuri <br><span class="gradient-text">Vastav Sekar</span></h1>
+                <p class="role">Serverless & AI Enhancement Developer</p>
+                <p class="summary">
+                    Building scalable cloud-based applications using modern serverless architectures and integrating AI
+                    capabilities into web solutions.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="#about" class="btn btn-secondary">More About Me</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="glow-effect"></div>
+                <img src="profile.jpg" alt="Vastav Sekar" class="profile-img">
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="line"></div>
+            </div>
+            <div class="card about-card glass">
+                <p>
+                    I am a Serverless and AI Enhancement Developer specializing in web technologies.
+                    I focus on building scalable cloud-based applications using modern serverless
+                    architectures and integrating AI capabilities into web solutions.
+                </p>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="section-header">
+                <h2>Education</h2>
+                <div class="line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item card glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>B.Tech</h3>
+                        <p class="institution">SVCE (SV Colleges, Tirupati)</p>
+                    </div>
+                </div>
+                <div class="timeline-item card glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Intermediate</h3>
+                        <p class="institution">Chaitanya Junior College, Tirupati</p>
+                    </div>
+                </div>
+                <div class="timeline-item card glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>SSC</h3>
+                        <p class="institution">Chaitanya Bharathi High School</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2>Skills & Expertise</h2>
+                <div class="line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card card glass"><i class="ph ph-cloud-arrow-up skill-icon"></i>
+                    <h3>AWS Cloud</h3>
+                    <p>Fundamentals & Cloud Computing Basics</p>
+                </div>
+                <div class="skill-card card glass cert-clickable" onclick="openCertificate('serverless-developer.pdf', 'aws-cloud-quest-serverless-developer-training-badge.png', 'Serverless', 'Earned this official AWS certificate by successfully completing practical projects and building modern scalable serverless architectures. This achievement is recognized by AWS and verified on Credly.')"><i class="ph ph-lightning skill-icon"></i>
+                    <h3>Serverless</h3>
+                    <p>Building modern scalable Serverless Architecture</p>
+                    <span class="view-cert-text"><i class="ph ph-file-pdf"></i> View Certificate</span>
+                </div>
+                <div class="skill-card card glass cert-clickable" onclick="openCertificate('geneative-ai.pdf', 'aws-cloud-quest-generative-ai-practitioner-training.png', 'AI Enhancement', 'Earned this official AWS certificate by successfully completing practical projects to integrate AI capabilities into web apps. This achievement is recognized by AWS and verified on Credly.')"><i class="ph ph-brain skill-icon"></i>
+                    <h3>AI Enhancement</h3>
+                    <p>Integrating AI capabilities into Web Apps</p>
+                    <span class="view-cert-text"><i class="ph ph-file-pdf"></i> View Certificate</span>
+                </div>
+                <div class="skill-card card glass"><i class="ph ph-code skill-icon"></i>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript & Modern Frameworks</p>
+                </div>
+                <div class="skill-card card glass cert-clickable" onclick="openCertificate('solutions-archietect.pdf', 'aws-cloud-quest-solutions-architect-training-badge.png', 'AWS Solutions Architect', 'Earned this official AWS certificate by undergoing the AWS Solutions Architect course and completing practical projects to design scalable cloud setups. This achievement is recognized by AWS and verified on Credly.')"><i class="ph ph-certificate skill-icon"></i>
+                    <h3>AWS Solutions Architect</h3>
+                    <p>Trained under AWS Solutions Architect course</p>
+                    <span class="view-cert-text"><i class="ph ph-file-pdf"></i> View Certificate</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card card glass">
+                    <div class="project-content"><i class="ph ph-folder-open project-icon"></i>
+                        <h3>Web Development Practice</h3>
+                        <p>Modern web interfaces and dynamic interactions.</p><a href="#" class="project-link">View
+                            Details <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card card glass">
+                    <div class="project-content"><i class="ph ph-cloud-check project-icon"></i>
+                        <h3>Cloud Computing Learning</h3>
+                        <p>AWS cloud technologies and scalable architectures.</p><a href="#" class="project-link">View
+                            Details <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="line"></div>
+            </div>
+            <div class="contact-card card glass">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="icon-box"><i class="ph ph-phone"></i></div>
+                        <div>
+                            <h4>Call Me</h4>
+                            <p>+91 9059494433</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon-box"><i class="ph ph-envelope-simple"></i></div>
+                        <div>
+                            <h4>Email Me</h4>
+                            <p><a href="mailto:cherukuricvs@gmail.com">cherukuricvs@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon-box"><i class="ph ph-linkedin-logo"></i></div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/vastav-sekar" target="_blank"
+                                    rel="noopener noreferrer">View Profile</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="logo">VS<span>.</span></a>
+            <p>© 2026 Cherukuri Vastav Sekar. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/vastav-sekar" target="_blank"><i
+                        class="ph ph-linkedin-logo"></i></a>
+                <a href="mailto:cherukuricvs@gmail.com"><i class="ph ph-envelope-simple"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Certificate Modal -->
+    <div id="certModal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-btn" onclick="closeCertificate()">&times;</span>
+            <div class="cert-layout">
+                <div class="cert-info">
+                    <img id="modalBadge" src="" alt="Badge" class="modal-badge">
+                    <h3 id="modalTitle">Achievement Title</h3>
+                    <p id="modalDesc">Achievement Details</p>
+                </div>
+                <div class="cert-container">
+                    <iframe id="certFrame" src="" frameborder="0"></iframe>
+                    <div id="certFallback" style="display: none; text-align: center; padding: 2rem;">
+                        <i class="ph ph-warning-circle" style="font-size: 3rem; color: var(--primary);"></i>
+                        <p style="margin-top: 1rem;">Certificate file not found or browser blocked PDF preview.</p>
+                        <a id="certDownloadLink" href="#" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
