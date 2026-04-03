@@ -115,9 +115,10 @@
                     <p>Integrating AI capabilities into Web Apps</p>
                     <span class="view-cert-text"><i class="ph ph-file-pdf"></i> View Certificate</span>
                 </div>
-                <div class="skill-card card glass"><i class="ph ph-code skill-icon"></i>
+                <div class="skill-card card glass cert-clickable" onclick="openCertificate('meta-certificate.png', '', 'Meta Front-End Developer', 'Earned the Introduction to Front-End Development certificate authorized by Meta and offered through Coursera. Trained as a Meta Web Developer.')"><i class="ph ph-code skill-icon"></i>
                     <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript & Modern Frameworks</p>
+                    <p>HTML, CSS, JavaScript & Modern Frameworks. Trained as a Meta Web Developer.</p>
+                    <span class="view-cert-text"><i class="ph ph-certificate"></i> View Certificate</span>
                 </div>
                 <div class="skill-card card glass cert-clickable" onclick="openCertificate('solutions-archietect.pdf', 'aws-cloud-quest-solutions-architect-training-badge.png', 'AWS Solutions Architect', 'Earned this official AWS certificate by undergoing the AWS Solutions Architect course and completing practical projects to design scalable cloud setups. This achievement is recognized by AWS and verified on Credly.')"><i class="ph ph-certificate skill-icon"></i>
                     <h3>AWS Solutions Architect</h3>
@@ -207,6 +208,7 @@
                 </div>
                 <div class="cert-container">
                     <iframe id="certFrame" src="" frameborder="0"></iframe>
+                    <img id="certImage" src="" alt="Certificate" style="display: none; max-width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                     <div id="certFallback" style="display: none; text-align: center; padding: 2rem;">
                         <i class="ph ph-warning-circle" style="font-size: 3rem; color: var(--primary);"></i>
                         <p style="margin-top: 1rem;">Certificate file not found or browser blocked PDF preview.</p>

@@ -67,6 +67,7 @@ revealElements.forEach(el => observer.observe(el));
 // Modal Logic
 const modal = document.getElementById("certModal");
 const certFrame = document.getElementById("certFrame");
+const certImage = document.getElementById("certImage");
 const certFallback = document.getElementById("certFallback");
 const certDownloadLink = document.getElementById("certDownloadLink");
 const modalBadge = document.getElementById("modalBadge");
@@ -88,8 +89,23 @@ function openCertificate(pdfUrl, badgeUrl, title, desc) {
     modalDesc.textContent = desc || "Achievement Details";
     
     // Reset display
-    certFrame.style.display = "block";
+    certFrame.style.display = "none";
+    certImage.style.display = "none";
     certFallback.style.display = "none";
+    
+    if (pdfUrl.startsWith('http')) {
+        certFallback.style.display = "block";
+        certFallback.querySelector('p').textContent = "This certificate is verified on an external platform. Click below to view.";
+        certDownloadLink.textContent = "View Certificate in New Tab";
+    } else if (pdfUrl.match(/\.(jpeg|jpg|gif|png)$/i)) {
+        certImage.style.display = "block";
+        certImage.src = pdfUrl;
+        certDownloadLink.textContent = "Download Image";
+    } else {
+        certFrame.style.display = "block";
+        certFallback.querySelector('p').textContent = "Certificate file not found or browser blocked PDF preview.";
+        certDownloadLink.textContent = "Download";
+    }
     
     modal.classList.add("show");
     document.body.style.overflow = "hidden"; // Prevent scrolling
@@ -99,6 +115,7 @@ function closeCertificate() {
     modal.classList.remove("show");
     setTimeout(() => {
         certFrame.src = ""; // Clear iframe after animation
+        certImage.src = ""; // Clear image after animation
     }, 300);
     document.body.style.overflow = "auto";
 }
