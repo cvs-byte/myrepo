@@ -9,13 +9,13 @@
     --bg-alt: #F8FAFC;
     /* Light gray for section contrast */
     --text-main: #0F172A;
-    --text-muted: #64748B;
+    --text-muted: #334155;
 
-    /* Brand Accents requested: Blue, Red, Yellow */
-    --accent-blue: #2563eb;
-    --accent-blue-hover: #1d4ed8;
-    --accent-red: #e11d48;
-    --accent-yellow: #f59e0b;
+    /* Brand Accents unified to a Professional Blue palette */
+    --accent-blue: #1E3A8A; /* Deep Corporate Blue */
+    --accent-blue-hover: #172554;
+    --accent-red: #3B82F6; /* Lighter Blue instead of Red */
+    --accent-yellow: #93C5FD; /* Pastel Blue instead of Yellow */
 
     --border-color: #E2E8F0;
 
@@ -23,9 +23,9 @@
     --font-body: 'Inter', sans-serif;
 
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+    --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.05);
 }
 
 /* --- Base & Reset --- */
@@ -290,8 +290,9 @@ img {
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, #60a5fa, #fbbf24);
+    background: linear-gradient(135deg, #60a5fa, #bfdbfe);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -474,6 +475,58 @@ img {
 }
 
 .why-list .info p {
+    color: var(--text-muted);
+}
+
+/* --- Testimonial Section --- */
+.testimonial-block {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--accent-blue);
+    position: relative;
+    margin-top: 2rem;
+}
+
+.testimonial-content {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.testimonial-content i {
+    font-size: 2.5rem;
+    color: rgba(30, 58, 138, 0.05); /* Very subtle blue */
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+    z-index: 0;
+}
+
+.testimonial-content p {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--text-main);
+    padding-left: 1rem;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.testimonial-author strong {
+    color: var(--accent-blue);
+    font-weight: 700;
+}
+
+.testimonial-author span {
+    font-size: 0.9rem;
     color: var(--text-muted);
 }
 
@@ -934,11 +987,22 @@ img {
     }
 
     .section-padding {
-        padding: 4rem 0;
+        padding: 3rem 0;
     }
 
     .footer-content {
         grid-template-columns: 1fr;
+    }
+
+    /* Boost touch targets & readability for mobile */
+    .btn {
+        width: 100%;
+        margin-bottom: 0.75rem;
+        padding: 1rem 1.5rem; /* Larger tap area */
+    }
+
+    .hero-subtitle {
+        font-size: 1.15rem; /* readable base font */
     }
 }
 
