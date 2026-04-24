@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Core SEO metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CVSCars offers premium high-performance cars with world-class design, safety, and innovation. Explore models and connect with a buying specialist.">
+  <meta name="keywords" content="CVSCars, premium cars, luxury vehicles, electric cars, car buying">
+  <meta name="author" content="CVSCars">
+  <title>CVSCars | Drive the Future</title>
+
+  <!-- Typography for premium automotive visual language -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Preloader appears briefly until all assets are loaded -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="loader-ring" title="Loading"></div>
+  </div>
+
+  <!-- Sticky glassmorphism navigation -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="CVSCars home">
+        <span>CVS</span>
+        <span>Cars</span>
+      </a>
+
+      <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">☰</button>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a data-nav-link href="index.html">Home</a></li>
+          <li><a data-nav-link href="cars.html">Cars</a></li>
+          <li><a data-nav-link href="car-details.html">Car Details</a></li>
+          <li><a data-nav-link href="about.html">About</a></li>
+          <li><a data-nav-link href="contact.html">Contact</a></li>
+          <li><a data-nav-link href="../index.html" class="nav-hub-link" title="Back to Design Services Hub">Design Hub</a></li>
+          <li><a href="../index.html" class="nav-hub-link" title="Back to Design Services Hub">
+            <span>🏢</span>
+            <span>Hub</span>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container mobile-menu" data-mobile-menu id="mobile-menu" hidden>
+      <a data-nav-link href="index.html">Home</a>
+      <a data-nav-link href="cars.html">Cars</a>
+      <a data-nav-link href="car-details.html">Car Details</a>
+      <a data-nav-link href="about.html">About</a>
+      <a data-nav-link href="contact.html">Contact</a>
+      <a data-nav-link href="../index.html" class="nav-hub-link" title="Back to Design Services Hub">Design Hub</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fullscreen hero with cinematic image and layered overlay -->
+    <section class="hero">
+      <div class="hero-media parallax" data-parallax="0.08" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1800&q=80" alt="Premium sports car at night">
+      </div>
+
+      <div class="container hero-content reveal">
+        <span class="badge">Since 1998 | Premium Automotive House</span>
+        <h1 class="hero-title">Command Every Horizon</h1>
+        <p class="hero-copy">CVSCars curates precision-built performance vehicles engineered for speed, safety, and intelligent mobility. Buy with confidence through transparent support and expert guidance.</p>
+        <div class="cta-group">
+          <a href="cars.html" class="btn btn-primary">Explore Cars</a>
+          <a href="contact.html" class="btn btn-outline">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand highlights for trust and positioning -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Built on Three Pillars</h2>
+        <p class="section-subtitle reveal">Performance, safety, and innovation are at the center of every CVSCars vehicle and every customer experience.</p>
+
+        <div class="grid highlights">
+          <article class="card highlight-card reveal">
+            <span class="badge">Performance</span>
+            <h3>Track-Calibrated Dynamics</h3>
+            <p>High-output engines, adaptive suspension, and torque vectoring create precision control at any speed.</p>
+          </article>
+          <article class="card highlight-card reveal">
+            <span class="badge">Safety</span>
+            <h3>Intelligent Protection</h3>
+            <p>Advanced braking systems, lane sensing, and collision mitigation for confidence on every journey.</p>
+          </article>
+          <article class="card highlight-card reveal">
+            <span class="badge">Innovation</span>
+            <h3>Connected Future Mobility</h3>
+            <p>AI-assisted cockpit, over-the-air updates, and next-generation electric platform architecture.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript powered featured cars carousel -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Featured Machines</h2>
+        <p class="section-subtitle reveal">A curated line-up of flagship models designed for enthusiasts and modern families alike.</p>
+
+        <div class="slider-shell reveal" data-carousel="featured">
+          <div class="featured-track">
+            <article class="featured-slide">
+              <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=1600&q=80" alt="CVSCars Apex EV">
+              <div class="featured-overlay">
+                <div>
+                  <h3>CVSCars Apex EV</h3>
+                  <p>820 HP | 0-100 km/h in 3.2s</p>
+                </div>
+                <a href="car-details.html" class="btn btn-primary">View Details</a>
+              </div>
+            </article>
+            <article class="featured-slide">
+              <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1600&q=80" alt="CVSCars Terra SUV">
+              <div class="featured-overlay">
+                <div>
+                  <h3>CVSCars Terra SUV</h3>
+                  <p>Hybrid AWD | 7-Seater Luxury</p>
+                </div>
+                <a href="car-details.html" class="btn btn-primary">View Details</a>
+              </div>
+            </article>
+            <article class="featured-slide">
+              <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1600&q=80" alt="CVSCars Stratos Coupe">
+              <div class="featured-overlay">
+                <div>
+                  <h3>CVSCars Stratos Coupe</h3>
+                  <p>Petrol Twin-Turbo | 330 km/h Top Speed</p>
+                </div>
+                <a href="car-details.html" class="btn btn-primary">View Details</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="slider-controls reveal">
+          <button class="slider-btn" data-prev aria-label="Previous slide">←</button>
+          <button class="slider-btn" data-next aria-label="Next slide">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animated counters to reinforce trust with metrics -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Performance by Numbers</h2>
+        <div class="grid stats-grid">
+          <article class="card stat-card reveal">
+            <div class="value" data-counter data-target="820" data-suffix=" HP">0 HP</div>
+            <p>Peak Horsepower</p>
+          </article>
+          <article class="card stat-card reveal">
+            <div class="value" data-counter data-target="330" data-suffix=" km/h">0 km/h</div>
+            <p>Top Speed</p>
+          </article>
+          <article class="card stat-card reveal">
+            <div class="value" data-counter data-target="3" data-suffix=".2s">0.0s</div>
+            <p>0-100 km/h Acceleration</p>
+          </article>
+          <article class="card stat-card reveal">
+            <div class="value" data-counter data-target="98" data-suffix="%">0%</div>
+            <p>Customer Satisfaction</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials for social proof -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">What Drivers Say</h2>
+        <div class="grid testimonial-grid">
+          <article class="card testimonial reveal">
+            <p>"The CVSCars Apex EV feels like tomorrow. The cabin is quiet, but the power delivery is absolutely thrilling."</p>
+            <h4>- Daniel R., Performance Enthusiast</h4>
+          </article>
+          <article class="card testimonial reveal">
+            <p>"Professional team, transparent pricing, and one of the smoothest car-purchase experiences I have seen."</p>
+            <h4>- Maria S., Entrepreneur</h4>
+          </article>
+          <article class="card testimonial reveal">
+            <p>"From city traffic to highway runs, the safety suite and comfort make this the perfect family premium SUV."</p>
+            <h4>- Ahmad K., Family Buyer</h4>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strong conversion-focused CTA -->
+    <section class="section">
+      <div class="container card form-shell reveal" style="text-align:center;">
+        <h2 class="section-title" style="margin-bottom:0.7rem;">Ready to Feel the Difference?</h2>
+        <p class="section-subtitle" style="margin:0 auto 1.2rem;">Talk to our specialists and reserve your preferred vehicle with a guided buying consultation.</p>
+        <div class="cta-group" style="justify-content:center;">
+          <a href="cars.html" class="btn btn-outline">Explore Cars</a>
+          <a href="contact.html" class="btn btn-primary">Start Purchase Inquiry</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with social links -->
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>© <span data-year></span> CVSCars. Crafted for the driven.</p>
+      <div class="socials" aria-label="Social links">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shared site script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

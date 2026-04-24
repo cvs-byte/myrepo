@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Luxury Cars | CVS Cars</title>
+    <meta name="description" content="Browse our exclusive inventory of luxury cars for sale at CVS Cars. Sports cars, SUVs, and electric vehicles. Easy financing and delivery available.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CVS<span> CARS</span></a>
+            <button class="hamburger"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../index.html" class="nav-hub-link" title="Back to Design Services Hub">Design Hub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container reveal">
+            <h1>Shop Our Inventory</h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Choose from our exclusive selection of premium vehicles. Find the perfect car for you with flexible financing options available.</p>
+        </div>
+    </header>
+
+    <!-- Filters & Grid -->
+    <section class="container" style="padding: 60px 0 100px;">
+        
+        <!-- Filter Buttons -->
+        <div class="filters reveal">
+            <button class="filter-btn active" data-filter="all">All Vehicles</button>
+            <button class="filter-btn" data-filter="sports">Sports Cars</button>
+            <button class="filter-btn" data-filter="suv">Luxury SUVs</button>
+            <button class="filter-btn" data-filter="ev">Electric Vehicles</button>
+        </div>
+
+        <div class="car-grid">
+            <!-- Car 1 -->
+            <div class="car-card" data-category="sports">
+                <div class="car-badge">In Stock</div>
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&q=80&w=800" alt="Valkyrie GT">
+                </div>
+                <div class="car-info">
+                    <h3 class="car-title">Valkyrie GT</h3>
+                    <p class="car-price">$185,000</p>
+                    <div class="car-specs">
+                        <div class="spec"><span>Fuel</span><strong>Petrol</strong></div>
+                        <div class="spec"><span>Power</span><strong>720 HP</strong></div>
+                    </div>
+                    <a href="car-details.html" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-card" data-category="ev">
+                <div class="car-badge">Electric</div>
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&q=80&w=800" alt="Aero X">
+                </div>
+                <div class="car-info">
+                    <h3 class="car-title">Aero X</h3>
+                    <p class="car-price">$120,000</p>
+                    <div class="car-specs">
+                        <div class="spec"><span>Fuel</span><strong>Electric</strong></div>
+                        <div class="spec"><span>Power</span><strong>650 HP</strong></div>
+                    </div>
+                    <a href="car-details.html" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-card" data-category="suv">
+                <div class="car-badge">Luxury</div>
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1503376760367-1b618dbbc8ca?auto=format&fit=crop&q=80&w=800" alt="Phantom SUV">
+                </div>
+                <div class="car-info">
+                    <h3 class="car-title">Phantom SUV</h3>
+                    <p class="car-price">$145,000</p>
+                    <div class="car-specs">
+                        <div class="spec"><span>Fuel</span><strong>Hybrid</strong></div>
+                        <div class="spec"><span>Power</span><strong>550 HP</strong></div>
+                    </div>
+                    <a href="car-details.html" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- Car 4 -->
+            <div class="car-card" data-category="sports">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16?auto=format&fit=crop&q=80&w=800" alt="Nemesis R">
+                </div>
+                <div class="car-info">
+                    <h3 class="car-title">Nemesis R</h3>
+                    <p class="car-price">$210,000</p>
+                    <div class="car-specs">
+                        <div class="spec"><span>Fuel</span><strong>Petrol</strong></div>
+                        <div class="spec"><span>Power</span><strong>810 HP</strong></div>
+                    </div>
+                    <a href="car-details.html" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- Car 5 -->
+            <div class="car-card" data-category="ev">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938cb?auto=format&fit=crop&q=80&w=800" alt="Volt Roadster">
+                </div>
+                <div class="car-info">
+                    <h3 class="car-title">Volt Roadster</h3>
+                    <p class="car-price">$175,000</p>
+                    <div class="car-specs">
+                        <div class="spec"><span>Fuel</span><strong>Electric</strong></div>
+                        <div class="spec"><span>Power</span><strong>1020 HP</strong></div>
+                    </div>
+                    <a href=\"car-details.html\" class=\"btn btn-primary\">Buy Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom" style="border-top: none; padding-top: 0;">
+            <p>&copy; 2026 CVS Cars. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/18005550199" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

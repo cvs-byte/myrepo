@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Design Services Hub - Enterprise Portfolio & Project Launcher" />
+  <meta name="theme-color" content="#0f766e" />
+  <title>Design Services Hub | Professional Portfolio Launcher</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background Elements -->
+  <div class="background-overlay" aria-hidden="true"></div>
+  <div class="ambient-light top" aria-hidden="true"></div>
+  <div class="ambient-light bottom" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-icon">
+        <i class="fas fa-layer-group"></i>
+      </div>
+      <div class="brand-content">
+        <p class="kicker">Professional Portfolio</p>
+        <h1 class="brand-title">Design Services Hub</h1>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Dark/Light Mode">
+        <i class="fas fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2 class="hero-title">Enterprise-Grade Design Portfolio</h2>
+        <p class="hero-subtitle">Curated collection of professional design projects. Explore automotive, hospitality, e-commerce, and technology solutions.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Industries</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">20+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Controls -->
+    <section class="controls-section">
+      <div class="search-container">
+        <label class="search-wrap" for="projectSearch">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            id="projectSearch"
+            type="search"
+            placeholder="Search by project name, industry, or type..."
+            autocomplete="off"
+            aria-label="Search projects"
+          />
+        </label>
+        <div class="controls-meta">
+          <span class="badge" id="resultCount" aria-live="polite" aria-label="Project count">10 projects</span>
+          <button class="filter-toggle" id="filterToggle" aria-expanded="false" title="Filter options">
+            <i class="fas fa-sliders-h"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Panel -->
+      <div class="filter-panel" id="filterPanel" hidden>
+        <div class="filter-group">
+          <label class="filter-label">
+            <input type="radio" name="type-filter" value="all" checked />
+            <span>All Projects</span>
+          </label>
+          <label class="filter-label">
+            <input type="radio" name="type-filter" value="html" />
+            <span>HTML Projects</span>
+          </label>
+          <label class="filter-label">
+            <input type="radio" name="type-filter" value="folder" />
+            <span>Multi-page Sites</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information Banner -->
+    <section class="info-banner" role="note">
+      <div class="info-content">
+        <i class="fas fa-lightbulb info-icon"></i>
+        <div>
+          <h3>Quick Start Guide</h3>
+          <p><strong>HTML Projects:</strong> Open directly from this launcher. <strong>Multi-page Sites:</strong> Click to explore complete project structure with navigation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category-section">
+      <h3 class="section-title">Projects by Category</h3>
+      <div class="category-tabs">
+        <button class="category-btn active" data-category="all">
+          <span>All</span>
+          <span class="category-count" id="count-all">10</span>
+        </button>
+        <button class="category-btn" data-category="automotive">
+          <i class="fas fa-car"></i>
+          <span>Automotive</span>
+          <span class="category-count" id="count-automotive">3</span>
+        </button>
+        <button class="category-btn" data-category="hospitality">
+          <i class="fas fa-hotel"></i>
+          <span>Hospitality</span>
+          <span class="category-count" id="count-hospitality">2</span>
+        </button>
+        <button class="category-btn" data-category="ecommerce">
+          <i class="fas fa-shopping-bag"></i>
+          <span>E-Commerce</span>
+          <span class="category-count" id="count-ecommerce">3</span>
+        </button>
+        <button class="category-btn" data-category="technology">
+          <i class="fas fa-laptop"></i>
+          <span>Technology</span>
+          <span class="category-count" id="count-technology">2</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section id="projectGrid" class="grid" aria-label="Project cards"></section>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="empty-state" hidden>
+      <i class="fas fa-search empty-icon"></i>
+      <h3>No Projects Found</h3>
+      <p>Try adjusting your search or filter criteria</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Professional Design Services. All rights reserved.</p>
+      <p class="designer-note">Crafted with attention to detail by a 20+ year UX/UI professional.</p>
+    </div>
+  </footer>
+
+  <!-- Project Card Template -->
+  <template id="projectCardTemplate">
+    <article class="card" data-project-type="" data-category="">
+      <div class="card-header">
+        <div class="card-type-badge">
+          <i class="card-type-icon"></i>
+          <span class="type-label"></span>
+        </div>
+        <h3 class="card-title"></h3>
+      </div>
+      <p class="card-path"></p>
+      <p class="card-desc"></p>
+      <div class="card-meta">
+        <span class="category-tag"></span>
+      </div>
+      <div class="card-actions">
+        <a class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-arrow-right"></i>
+          <span>View Project</span>
+        </a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cvs clothes | Modern Minimalist Clothing</title>
+    <meta name="description" content="Shop the latest minimal and trendy clothing for men, women, and kids at cvs clothes.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">cvs <span>clothes</span></a>
+            <nav class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#categories">Categories</a>
+                <a href="#featured">Featured</a>
+                <a href="#new-arrivals">New Arrivals</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <i class="ri-search-line"></i>
+                </button>
+                <button class="icon-btn cart-btn" aria-label="Cart">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+                <a href="../index.html" class="btn-hub-link" title="Back to Design Services Hub">
+                    <i class="ri-layout-grid-line"></i>
+                    <span>Design Hub</span>
+                </a>
+                <button class="icon-btn menu-btn" aria-label="Menu" id="mobile-menu-btn">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Elevate Your<br>Everyday Style</h1>
+                <p class="hero-subtitle">Discover our premium collection of minimal, trendy clothing designed for the modern individual.</p>
+                <a href="#featured" class="btn btn-primary">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="categories section container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <a href="#" class="category-card" data-category="women">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop" alt="Women's Clothing" loading="lazy">
+                    <div class="category-overlay">
+                        <h3>Women</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-card" data-category="men">
+                    <img src="https://images.unsplash.com/photo-1516826957136-21808b2eb5f9?q=80&w=800&auto=format&fit=crop" alt="Men's Clothing" loading="lazy">
+                    <div class="category-overlay">
+                        <h3>Men</h3>
+                    </div>
+                </a>
+                <a href="#" class="category-card" data-category="kids">
+                    <img src="https://images.unsplash.com/photo-1519238382346-63e811ccece2?q=80&w=800&auto=format&fit=crop" alt="Kids' Clothing" loading="lazy">
+                    <div class="category-overlay">
+                        <h3>Kids</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section id="featured" class="featured section container">
+            <h2 class="section-title">Featured Collections</h2>
+            
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="women">Women</button>
+                <button class="filter-btn" data-filter="men">Men</button>
+                <button class="filter-btn" data-filter="kids">Kids</button>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+                <!-- Product Items injected via JS -->
+            </div>
+        </section>
+
+        <!-- Offers Banner -->
+        <section id="offers" class="offers">
+            <div class="container offers-content">
+                <h2>End of Season Sale</h2>
+                <p>Up to 50% off on all premium minimal collections. Limited time only.</p>
+                <a href="#featured" class="btn btn-outline-white">Explore Offers</a>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section id="new-arrivals" class="new-arrivals section container">
+            <h2 class="section-title">New Arrivals</h2>
+            <div class="product-grid" id="new-arrivals-grid">
+                <!-- Items injected via JS -->
+            </div>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section id="reviews" class="reviews section bg-light">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <p class="review-text">"The quality is exceptional. Exactly the minimalist aesthetic I was looking for. Fast shipping too!"</p>
+                        <p class="review-author">- Sarah J.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
+                        </div>
+                        <p class="review-text">"Love the fit of their essential tees. Perfect for building a capsule wardrobe."</p>
+                        <p class="review-author">- Michael T.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <p class="review-text">"Trendy kid's clothes that don't look tacky. My kids love them and they wash so well."</p>
+                        <p class="review-author">- Elena R.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="newsletter section container">
+            <div class="newsletter-box">
+                <h2>Join the Club</h2>
+                <p>Subscribe to our newsletter and get 15% off your first order.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">cvs <span>clothes</span></a>
+                <p>Bringing premium, modern minimalism to your everyday wardrobe.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="#">Women</a>
+                <a href="#">Men</a>
+                <a href="#">Kids</a>
+                <a href="#">New Arrivals</a>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Size Guide</a>
+                <a href="#">Track Order</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 cvs clothes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Notification Toast setup -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

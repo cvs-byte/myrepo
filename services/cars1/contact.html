@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact CVSCars for premium vehicle inquiries, consultation, and purchase assistance.">
+  <title>Contact | CVSCars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="loader-ring" title="Loading"></div>
+  </div>
+
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="CVSCars home">
+        <span>CVS</span>
+        <span>Cars</span>
+      </a>
+      <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">☰</button>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a data-nav-link href="index.html">Home</a></li>
+          <li><a data-nav-link href="cars.html">Cars</a></li>
+          <li><a data-nav-link href="car-details.html">Car Details</a></li>
+          <li><a data-nav-link href="about.html">About</a></li>
+          <li><a data-nav-link href="contact.html">Contact</a></li>
+          <li><a data-nav-link href="../index.html" class="nav-hub-link" title="Back to Design Services Hub">Design Hub</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container mobile-menu" data-mobile-menu id="mobile-menu" hidden>
+      <a data-nav-link href="index.html">Home</a>
+      <a data-nav-link href="cars.html">Cars</a>
+      <a data-nav-link href="car-details.html">Car Details</a>
+      <a data-nav-link href="about.html">About</a>
+      <a data-nav-link href="contact.html">Contact</a>
+      <a data-nav-link href="../index.html" class="nav-hub-link" title="Back to Design Services Hub">Design Hub</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="container">
+        <span class="badge reveal">Connect</span>
+        <h1 class="reveal">Connect With a Buying Specialist</h1>
+        <p class="section-subtitle reveal">Speak directly with a CVSCars specialist, compare options, and request a detailed purchase proposal for your preferred model.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container contact-grid">
+        <!-- Conversion-first contact form -->
+        <article class="card form-shell reveal">
+          <h2 style="font-size:2rem; margin-bottom:0.8rem;">Contact Form</h2>
+          <form data-demo-form>
+            <div class="field">
+              <label for="full-name">Full Name</label>
+              <input id="full-name" type="text" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" required>
+            </div>
+            <div class="field">
+              <label for="message">How can we help?</label>
+              <textarea id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.65rem;">Send Inquiry</button>
+            <p data-form-status style="margin-top:0.65rem;"></p>
+          </form>
+
+          <!-- Quick actions for call conversion -->
+          <div class="quick-actions">
+            <a href="tel:+18005551234" class="btn btn-outline" aria-label="Call CVSCars">Call Sales: +1 (800) 555-1234</a>
+            <a href="mailto:sales@cvscars.com" class="btn btn-outline">Email Us</a>
+          </div>
+        </article>
+
+        <!-- Google Maps embed for physical dealership trust signal -->
+        <article class="card map-shell reveal">
+          <h2 style="font-size:2rem; margin-bottom:0.8rem;">Visit Our Studio</h2>
+          <p style="margin-bottom:0.8rem;">2100 Horizon Boulevard, Auto District, Los Angeles, CA</p>
+          <iframe title="CVSCars location" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Los+Angeles+Auto+District&output=embed"></iframe>
+        </article>
+      </div>
+    </section>
+
+    <a class="whatsapp-float" href="https://wa.me/18005551234" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>© <span data-year></span> CVSCars. Personal assistance, premium care.</p>
+      <div class="socials" aria-label="Social links">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
