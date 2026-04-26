@@ -107,10 +107,11 @@ h1 {
 .viewer-wrap {
   border: 1px solid var(--line);
   border-radius: 20px;
-  background: var(--paper);
+  background: linear-gradient(180deg, #dfe6f0 0%, #e6ebf3 100%);
   box-shadow: var(--shadow);
-  padding: 20px;
+  padding: 24px;
   min-height: 55vh;
+  overflow: auto;
   animation: rise 1040ms ease-out;
 }
 
@@ -118,6 +119,22 @@ h1 {
   font-family: "Literata", Georgia, serif;
   line-height: 1.66;
   color: #20263a;
+  min-height: 100%;
+}
+
+.viewer .docx-wrapper,
+.viewer .docx {
+  background: transparent;
+}
+
+.viewer .docx .docx-page {
+  margin: 0 auto 18px;
+  box-shadow: 0 10px 28px rgba(21, 31, 58, 0.2);
+  border: 1px solid rgba(25, 38, 74, 0.12);
+}
+
+.viewer .docx .docx-page:last-child {
+  margin-bottom: 0;
 }
 
 .viewer h1,

@@ -13,11 +13,22 @@ function setStatus(message) {
 }
 
 async function renderDocxFromArrayBuffer(arrayBuffer) {
-  const result = await mammoth.convertToHtml({ arrayBuffer });
-  viewer.innerHTML = result.value || "<p>No readable content was found in this document.</p>";
+  viewer.innerHTML = "";
 
-  if (result.messages.length > 0) {
-    console.warn("Mammoth messages:", result.messages);
+  await docx.renderAsync(arrayBuffer, viewer, null, {
+    className: "docx",
+    inWrapper: false,
+    ignoreWidth: false,
+    ignoreHeight: false,
+    breakPages: true,
+    renderHeaders: true,
+    renderFooters: true,
+    renderChanges: true,
+    useBase64URL: true
+  });
+
+  if (!viewer.textContent.trim()) {
+    viewer.innerHTML = "<p>No readable content was found in this document.</p>";
   }
 }
 
