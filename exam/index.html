@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document Reader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-shape shape-1" aria-hidden="true"></div>
+  <div class="bg-shape shape-2" aria-hidden="true"></div>
+
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">Online Reader</p>
+      <h1>Read Your Word File Online</h1>
+      <p class="subtitle">Open your file instantly, view the content clearly, and export it as PDF.</p>
+    </header>
+
+    <section class="controls" aria-label="Document controls">
+      <button id="loadDoc" class="btn primary">Open Word File</button>
+      <button id="openPdf" class="btn ghost">Open PDF File</button>
+      <button id="viewPhotos" class="btn ghost">View Photos</button>
+      <button id="downloadWord" class="btn ghost">Download Word</button>
+      <button id="downloadPdf" class="btn accent">Download as PDF</button>
+      <input id="fileInput" type="file" accept=".docx" hidden />
+      <p id="status" class="status">Ready. Click "Open Word File" to load the document.</p>
+    </section>
+
+    <section aria-label="Reader area">
+      <section class="viewer-wrap" aria-live="polite">
+        <article id="viewer" class="viewer"></article>
+      </section>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docx-preview@0.3.7/dist/docx-preview.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
