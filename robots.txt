@@ -1,4 +1,33 @@
+# SEO Optimized robots.txt for CVS Companies
+# Allow all crawlers to index the site
+
+# Default rules for all user agents
 User-agent: *
 Allow: /
+Crawl-delay: 0
 
+# Google specific optimizations
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing specific rules
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Disallow admin and private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /backup/
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Allow CSS and JavaScript files
+Allow: /*.css$
+Allow: /*.js$
+
+# Sitemap locations
 Sitemap: https://cvscompanies.tech/sitemap.xml
+
+# End of robots.txt
