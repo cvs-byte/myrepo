@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the story, mission, and design philosophy behind CVSCars.">
+  <title>About | CVSCars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="loader-ring" title="Loading"></div>
+  </div>
+
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="CVSCars home">
+        <span>CVS</span>
+        <span>Cars</span>
+      </a>
+      <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">☰</button>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a data-nav-link href="index.html">Home</a></li>
+          <li><a data-nav-link href="cars.html">Cars</a></li>
+          <li><a data-nav-link href="car-details.html">Car Details</a></li>
+          <li><a data-nav-link href="about.html">About</a></li>
+          <li><a data-nav-link href="contact.html">Contact</a></li>
+          <li><a data-nav-link href="../index.html" class="nav-hub-link" title="Back to Design Services Hub">Design Hub</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container mobile-menu" data-mobile-menu id="mobile-menu" hidden>
+      <a data-nav-link href="index.html">Home</a>
+      <a data-nav-link href="cars.html">Cars</a>
+      <a data-nav-link href="car-details.html">Car Details</a>
+      <a data-nav-link href="about.html">About</a>
+      <a data-nav-link href="contact.html">Contact</a>
+      <a data-nav-link href="../index.html" class="nav-hub-link" title="Back to Design Services Hub">Design Hub</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="container">
+        <span class="badge reveal">Our DNA</span>
+        <h1 class="reveal">Engineering Emotion Since 1998</h1>
+        <p class="section-subtitle reveal">CVSCars is where high-performance engineering meets elegant design language and deeply human driving experiences.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container about-grid">
+        <div class="about-image reveal parallax" data-parallax="0.04">
+          <img src="https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?auto=format&fit=crop&w=1400&q=80" alt="CVSCars design studio">
+        </div>
+        <article class="card about-block reveal">
+          <h2 style="font-size:2.3rem; margin-bottom:0.7rem;">Vision</h2>
+          <p>We build premium vehicles that deliver cinematic design, intuitive technology, and precision handling for drivers who expect more than transportation.</p>
+          <h3 style="font-size:1.8rem; margin:1rem 0 0.5rem;">Mission</h3>
+          <p>To redefine modern luxury mobility with sustainable performance platforms, human-centered interiors, and uncompromising quality.</p>
+          <div class="cta-group" style="margin-top:1rem;">
+            <a href="cars.html" class="btn btn-outline">Explore Fleet</a>
+            <a href="contact.html" class="btn btn-primary">Talk to Sales</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <h2 class="section-title reveal">Milestones</h2>
+        <div class="timeline">
+          <article class="card timeline-item reveal">
+            <h3>1998 - Foundation</h3>
+            <p>CVSCars was founded with a focus on premium performance sedans and engineering-first design philosophy.</p>
+          </article>
+          <article class="card timeline-item reveal">
+            <h3>2010 - Global Expansion</h3>
+            <p>Established global distribution and launched advanced safety architecture across all production models.</p>
+          </article>
+          <article class="card timeline-item reveal">
+            <h3>2019 - Electric Future</h3>
+            <p>Introduced first high-performance electric flagship platform with over-the-air software capabilities.</p>
+          </article>
+          <article class="card timeline-item reveal">
+            <h3>2026 - Next Mobility</h3>
+            <p>Scaling autonomous-ready, connected luxury mobility ecosystem with carbon-conscious manufacturing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>© <span data-year></span> CVSCars. Designed for drivers who lead.</p>
+      <div class="socials" aria-label="Social links">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CVS Resort | Luxury Hotel Booking</title>
+  <meta name="description" content="CVS Resort offers curated luxury stays, world-class dining, and wellness experiences. Book your 5-star escape today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar" id="top">
+    <div class="container nav-content">
+      <a href="#top" class="brand">CVS Resort</a>
+      <button class="menu-toggle" aria-label="Toggle navigation" id="menuToggle">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#gallery">Gallery</a>
+        <a href="../index.html" class="nav-hub-link" title="Back to Design Services Hub">Hub</a>
+        <a href="#booking" class="nav-cta">Book</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <p class="hero-kicker">A Sanctuary of Refined Comfort</p>
+      <h1>Where Timeless Luxury Meets Oceanfront Serenity</h1>
+      <p class="hero-subtext">
+        Discover handcrafted hospitality, panoramic suites, and bespoke experiences designed for unforgettable stays.
+      </p>
+      <a href="#booking" class="btn-gold">Book Now</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="rooms">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Stay in Grandeur</p>
+          <h2>Signature Rooms & Suites</h2>
+        </div>
+        <div class="room-grid">
+          <article class="room-card">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80" alt="Deluxe Ocean View Room" />
+            <div class="room-body">
+              <h3>Deluxe Ocean View</h3>
+              <p class="price">$420 <span>/ night</span></p>
+              <ul>
+                <li>Private balcony with sea view</li>
+                <li>King bed and marble bathroom</li>
+                <li>Complimentary airport transfer</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80" alt="CVS Suite" />
+            <div class="room-body">
+              <h3>CVS Suite</h3>
+              <p class="price">$680 <span>/ night</span></p>
+              <ul>
+                <li>Separate lounge and dining area</li>
+                <li>Butler service on request</li>
+                <li>Sunset terrace jacuzzi</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80" alt="Presidential Villa" />
+            <div class="room-body">
+              <h3>Presidential Villa</h3>
+              <p class="price">$1,250 <span>/ night</span></p>
+              <ul>
+                <li>Private infinity plunge pool</li>
+                <li>Two-bedroom residence setup</li>
+                <li>Dedicated concierge and chauffeur</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section amenities" id="amenities">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Elevated Lifestyle</p>
+          <h2>World-Class Amenities</h2>
+        </div>
+        <div class="amenities-grid">
+          <article>
+            <h3>High-Speed WiFi</h3>
+            <p>Seamless connectivity across all rooms, villas, and lounges for work and leisure.</p>
+          </article>
+          <article>
+            <h3>Infinity Pool</h3>
+            <p>Relax by an ocean-facing pool deck with private cabanas and crafted refreshments.</p>
+          </article>
+          <article>
+            <h3>Luxury Spa</h3>
+            <p>Rejuvenate with signature therapies inspired by regional botanicals and rituals.</p>
+          </article>
+          <article>
+            <h3>Fine Dining</h3>
+            <p>Enjoy award-winning cuisine curated by renowned chefs in elegant settings.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Guest Impressions</p>
+          <h2>Trusted by Travelers Worldwide</h2>
+        </div>
+        <div class="testimonial-grid">
+          <blockquote>
+            “Every detail felt intentional. The suite, the dining, and the service were simply exceptional.”
+            <cite>- Amelia R., London</cite>
+          </blockquote>
+          <blockquote>
+            “CVS Resort delivered true 5-star hospitality. It is now our annual getaway.”
+            <cite>- Daniel & Priya K., Singapore</cite>
+          </blockquote>
+          <blockquote>
+            “From check-in to checkout, the team made us feel personally cared for and completely relaxed.”
+            <cite>- Marcus T., New York</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Visual Journey</p>
+          <h2>Resort Gallery</h2>
+        </div>
+        <div class="slider" aria-label="CVS Resort image gallery slider">
+          <button class="slide-btn prev" id="prevSlide" aria-label="Previous image">&#10094;</button>
+          <div class="slides" id="slides">
+            <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1600&q=80" alt="Resort pool at sunset" class="slide active" />
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=80" alt="Luxury hotel lobby" class="slide" />
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80" alt="Elegant hotel suite" class="slide" />
+            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1600&q=80" alt="Fine dining at the resort" class="slide" />
+          </div>
+          <button class="slide-btn next" id="nextSlide" aria-label="Next image">&#10095;</button>
+          <div class="dots" id="dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking" id="booking">
+      <div class="container booking-wrap">
+        <div class="booking-copy">
+          <p class="section-kicker">Reserve Your Escape</p>
+          <h2>Book Your Stay at CVS Resort</h2>
+          <p>Secure your preferred suite and let our concierge curate a seamless luxury experience from arrival to departure.</p>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="checkIn">Check-In Date</label>
+          <input type="date" id="checkIn" name="checkIn" required />
+
+          <label for="checkOut">Check-Out Date</label>
+          <input type="date" id="checkOut" name="checkOut" required />
+
+          <label for="guests">Guests</label>
+          <select id="guests" name="guests" required>
+            <option value="">Select guests</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5+ Guests</option>
+          </select>
+
+          <button type="submit" class="btn-gold">Confirm Booking</button>
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>CVS Resort | Curated Luxury, Every Stay</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

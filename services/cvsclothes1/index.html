@@ -1,0 +1,1257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cvs clothes | Premium Street Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #6b6b6b;
+      --line: #e9e9e9;
+      --line-strong: #cfcfcf;
+      --card: #f8f8f8;
+      --soft: #f2f2f2;
+      --inverse: #0b0b0b;
+      --inverse-soft: #181818;
+      --success: #0f8f4f;
+      --radius: 14px;
+      --shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 300px at 60% -10%, #efefef 0%, transparent 65%),
+        radial-gradient(900px 200px at 10% 5%, #f4f4f4 0%, transparent 55%),
+        var(--bg);
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+      overflow-x: hidden;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max-width), 92%);
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid var(--inverse);
+      background: var(--inverse);
+      color: #fff;
+      font-weight: 700;
+      font-family: "Sora", sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 12px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease, color 220ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+      background: #000;
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: var(--inverse);
+    }
+
+    .btn.secondary:hover {
+      background: #f3f3f3;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-title {
+      font-family: "Sora", sans-serif;
+      font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 36px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .announcement {
+      background: #090909;
+      color: #f7f7f7;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 9px 12px;
+      border-bottom: 1px solid #232323;
+    }
+
+    /* Header */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(9px);
+      background: rgba(255, 255, 255, 0.88);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      font-family: "Sora", sans-serif;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      color: #2f2f2f;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: #111;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 220ms ease;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .cart-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--inverse);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .cart-pill small {
+      color: #d4d4d4;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-left: 2px;
+    }
+
+    .cart-pill span {
+      display: inline-flex;
+      min-width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: #fff;
+      color: #000;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 86px 0 76px;
+    }
+
+    .hero-wrap {
+      border: 1px solid #dcdcdc;
+      border-radius: calc(var(--radius) + 6px);
+      overflow: hidden;
+      background: linear-gradient(130deg, #050505 20%, #1c1c1c 100%);
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      min-height: 500px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-content {
+      padding: clamp(26px, 5vw, 56px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    .hero-content::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: clamp(26px, 5vw, 56px);
+      width: 86px;
+      height: 2px;
+      background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
+    }
+
+    .hero-tag {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.75rem;
+      color: #d4d4d4;
+    }
+
+    .hero h1 {
+      font-family: "Sora", sans-serif;
+      font-size: clamp(2rem, 4.8vw, 4rem);
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      max-width: 10ch;
+    }
+
+    .hero p {
+      color: #cbcbcb;
+      max-width: 46ch;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-proof {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      max-width: 520px;
+    }
+
+    .hero-proof-item {
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      border-radius: 10px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      text-align: center;
+    }
+
+    .hero-proof-item strong {
+      display: block;
+      font-family: "Sora", sans-serif;
+      font-size: 1.02rem;
+      margin-bottom: 2px;
+    }
+
+    .hero-proof-item span {
+      font-size: 0.76rem;
+      color: #e1e1e1;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-image {
+      min-height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      height: 100%;
+      transform: scale(1.02);
+      animation: heroZoom 14s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroZoom {
+      from { transform: scale(1.02) translateY(0); }
+      to { transform: scale(1.09) translateY(-8px); }
+    }
+
+    /* Categories */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .category-card {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      min-height: 300px;
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+
+    .category-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.15));
+      z-index: 1;
+    }
+
+    .category-card img {
+      height: 100%;
+      transition: transform 320ms ease;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .category-text {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      z-index: 2;
+      color: #fff;
+    }
+
+    .category-text h3 {
+      font-family: "Sora", sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    /* Filter */
+    .filter-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .result-copy {
+      font-size: 0.92rem;
+      color: #4f4f4f;
+      font-weight: 600;
+    }
+
+    .filters {
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      border: 1px solid #d7d7d7;
+      background: #fff;
+      color: #2f2f2f;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 220ms ease;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+    }
+
+    /* Products */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .product-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+      border-color: #cfcfcf;
+    }
+
+    .product-image {
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      background: #f1f1f1;
+    }
+
+    .product-image img {
+      height: 100%;
+      transition: transform 320ms ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.08);
+    }
+
+    .product-body {
+      padding: 14px;
+      display: grid;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .product-meta {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .product-name {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .price {
+      font-family: "Sora", sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .rating {
+      color: #111;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .cart-actions {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .add-cart {
+      width: 100%;
+      border: 1px solid #111;
+      background: #111;
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 200ms ease, transform 200ms ease;
+    }
+
+    .add-cart:hover {
+      background: #000;
+      transform: translateY(-1px);
+    }
+
+    .add-cart.added {
+      background: var(--success);
+      border-color: var(--success);
+    }
+
+    .hidden-card {
+      display: none;
+    }
+
+    /* Arrivals */
+    .arrival-strip {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      background: linear-gradient(180deg, #f9f9f9, #f3f3f3);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .arrival-item {
+      border: 1px solid #dfdfdf;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .arrival-item img {
+      aspect-ratio: 1 / 1;
+    }
+
+    .arrival-item p {
+      padding: 10px 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    /* Offer */
+    .offer {
+      margin-top: 8px;
+      border-radius: calc(var(--radius) + 4px);
+      background: repeating-linear-gradient(
+        -45deg,
+        #0a0a0a,
+        #0a0a0a 12px,
+        #171717 12px,
+        #171717 24px
+      );
+      color: #fff;
+      padding: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .offer h3 {
+      font-family: "Sora", sans-serif;
+      text-transform: uppercase;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+    }
+
+    .offer p {
+      color: #dbdbdb;
+      max-width: 50ch;
+    }
+
+    /* Reviews */
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .review {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      background: #fff;
+    }
+
+    .review .stars {
+      margin-bottom: 10px;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+
+    .review p {
+      color: #3d3d3d;
+      margin-bottom: 10px;
+    }
+
+    .review h4 {
+      font-size: 0.95rem;
+    }
+
+    .verified {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line-strong);
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #505050;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    /* Newsletter */
+    .newsletter-box {
+      border: 1px solid #d9d9d9;
+      border-radius: calc(var(--radius) + 4px);
+      padding: clamp(20px, 4vw, 34px);
+      background: #fff;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .newsletter-copy h3 {
+      font-family: "Sora", sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      font-size: clamp(1.2rem, 2.3vw, 1.7rem);
+    }
+
+    .newsletter-copy p {
+      color: var(--muted);
+      max-width: 58ch;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .newsletter-form input {
+      min-width: 260px;
+      border-radius: 999px;
+      border: 1px solid #cfcfcf;
+      padding: 12px 16px;
+      font: inherit;
+      outline: none;
+    }
+
+    .newsletter-form input:focus {
+      border-color: #111;
+    }
+
+    .form-note {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #2f2f2f;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      border-top: 1px solid var(--line);
+      padding: 32px 0;
+      background: #fff;
+    }
+
+    .footer-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .footer-title {
+      font-family: "Sora", sans-serif;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .footer-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      color: #454545;
+      font-size: 0.95rem;
+    }
+
+    .copyright {
+      margin-top: 22px;
+      color: #6b6b6b;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+
+    @media (max-width: 1020px) {
+      .hero-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        min-height: 320px;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .arrival-strip,
+      .review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-wrap {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-proof {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .newsletter-box {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter-form {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-links {
+        display: none;
+      }
+
+      .category-grid,
+      .products-grid,
+      .arrival-strip,
+      .review-grid,
+      .footer-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .hero-proof {
+        grid-template-columns: 1fr;
+      }
+
+      .offer {
+        padding: 24px;
+      }
+
+      .newsletter-form input {
+        min-width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">Free Shipping Over $99 | Easy 14-Day Returns | New Drop Live Now</div>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#" class="brand">cvs clothes</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#categories">Categories</a>
+        <a href="#featured">Featured</a>
+        <a href="#arrivals">New Arrivals</a>
+        <a href="#reviews">Reviews</a>
+        <a href="../index.html" class="nav-hub-link" title="Back to Design Services Hub">Hub</a>
+      </nav>
+      <div class="cart-pill" aria-live="polite" aria-label="Cart items">
+        Cart <span id="cartCount">0</span> <small id="cartTotal">$0</small>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container reveal">
+      <div class="hero-wrap">
+        <div class="hero-content">
+          <p class="hero-tag">Premium Capsule Drop 2026</p>
+          <h1>Streetwear Refined For Every Day</h1>
+          <p>Curated fits designed for confidence. Discover minimalist essentials and elevated layers that move with your lifestyle.</p>
+          <div class="hero-cta">
+            <a href="#featured" class="btn">Shop Now</a>
+            <a href="#arrivals" class="btn secondary">New Arrivals</a>
+          </div>
+          <div class="hero-proof" aria-label="Trust metrics">
+            <div class="hero-proof-item"><strong>50K+</strong><span>Happy Customers</span></div>
+            <div class="hero-proof-item"><strong>4.9/5</strong><span>Average Rating</span></div>
+            <div class="hero-proof-item"><strong>24h</strong><span>Fast Dispatch</span></div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=1200&q=80" alt="Urban fashion model in black and white aesthetic">
+        </div>
+      </div>
+    </section>
+
+    <section id="categories" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Shop By Category</h2>
+        <p class="section-subtitle">Clean silhouettes for every generation. Explore our core collections for men, women, and kids.</p>
+        <div class="category-grid">
+          <article class="category-card">
+            <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=1000&q=80" alt="Men's category fashion">
+            <div class="category-text">
+              <h3>Men</h3>
+              <p>Minimal staples and layered street style.</p>
+            </div>
+          </article>
+          <article class="category-card">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80" alt="Women's category fashion">
+            <div class="category-text">
+              <h3>Women</h3>
+              <p>Statement pieces with effortless edge.</p>
+            </div>
+          </article>
+          <article class="category-card">
+            <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1000&q=80" alt="Kids category fashion">
+            <div class="category-text">
+              <h3>Kids</h3>
+              <p>Comfort-first looks for bold little trendsetters.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <p class="section-subtitle">Best-selling cvs clothes pieces loved for quality, fit, and premium finish.</p>
+
+        <div class="filter-row">
+          <div class="filters" role="tablist" aria-label="Filter by category">
+            <button class="filter-btn active" data-filter="all" type="button">All</button>
+            <button class="filter-btn" data-filter="men" type="button">Men</button>
+            <button class="filter-btn" data-filter="women" type="button">Women</button>
+            <button class="filter-btn" data-filter="kids" type="button">Kids</button>
+          </div>
+          <p class="result-copy"><span id="visibleCount">8</span> products curated for you</p>
+        </div>
+
+        <div class="products-grid" id="productGrid">
+          <article class="product-card" data-category="men">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80" alt="Men's monochrome tee">
+            </div>
+            <div class="product-body">
+              <p class="product-meta">Best Seller</p>
+              <h3 class="product-name">Monochrome Tee</h3>
+              <div class="price-row">
+                <p class="price">$39</p>
+                <p class="rating">4.8 ★</p>
+              </div>
+              <div class="cart-actions">
+                <button class="add-cart" data-name="Monochrome Tee" data-price="39" type="button">Add To Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="women">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&fit=crop&w=800&q=80" alt="Women's oversized jacket">
+            </div>
+            <div class="product-body">
+              <p class="product-meta">Limited Drop</p>
+              <h3 class="product-name">Oversized Jacket</h3>
+              <div class="price-row">
+                <p class="price">$89</p>
+                <p class="rating">4.9 ★</p>
+              </div>
+              <div class="cart-actions">
+                <button class="add-cart" data-name="Oversized Jacket" data-price="89" type="button">Add To Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="kids">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1519238359922-989348752efb?auto=format&fit=crop&w=800&q=80" alt="Kids hoodie set">
+            </div>
+            <div class="product-body">
+              <p class="product-meta">New Season</p>
+              <h3 class="product-name">Urban Kids Hoodie</h3>
+              <div class="price-row">
+                <p class="price">$44</p>
+                <p class="rating">4.7 ★</p>
+              </div>
+              <div class="cart-actions">
+                <button class="add-cart" data-name="Urban Kids Hoodie" data-price="44" type="button">Add To Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="men">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=800&q=80" alt="Men's jogger pants">
+            </div>
+            <div class="product-body">
+              <p class="product-meta">Everyday Essential</p>
+              <h3 class="product-name">Classic Joggers</h3>
+              <div class="price-row">
+                <p class="price">$59</p>
+                <p class="rating">4.6 ★</p>
+              </div>
+              <div class="cart-actions">
+                <button class="add-cart" data-name="Classic Joggers" data-price="59" type="button">Add To Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="women">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Women's ribbed knit top">
+            </div>
+            <div class="product-body">
+              <p class="product-meta">Editor Pick</p>
+              <h3 class="product-name">Ribbed Knit Top</h3>
+              <div class="price-row">
+                <p class="price">$48</p>
+                <p class="rating">4.8 ★</p>
+              </div>
+              <div class="cart-actions">
+                <button class="add-cart" data-name="Ribbed Knit Top" data-price="48" type="button">Add To Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="kids">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?auto=format&fit=crop&w=800&q=80" alt="Kids street sneakers">
+            </div>
+            <div class="product-body">
+              <p class="product-meta">Comfort Focus</p>
+              <h3 class="product-name">Mini Street Sneakers</h3>
+              <div class="price-row">
+                <p class="price">$36</p>
+                <p class="rating">4.5 ★</p>
+              </div>
+              <div class="cart-actions">
+                <button class="add-cart" data-name="Mini Street Sneakers" data-price="36" type="button">Add To Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="men">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=800&q=80" alt="Men's bomber jacket">
+            </div>
+            <div class="product-body">
+              <p class="product-meta">Top Rated</p>
+              <h3 class="product-name">Black Bomber</h3>
+              <div class="price-row">
+                <p class="price">$110</p>
+                <p class="rating">4.9 ★</p>
+              </div>
+              <div class="cart-actions">
+                <button class="add-cart" data-name="Black Bomber" data-price="110" type="button">Add To Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="women">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80" alt="Women's tailored pants">
+            </div>
+            <div class="product-body">
+              <p class="product-meta">Tailored Fit</p>
+              <h3 class="product-name">Tailored Pants</h3>
+              <div class="price-row">
+                <p class="price">$72</p>
+                <p class="rating">4.7 ★</p>
+              </div>
+              <div class="cart-actions">
+                <button class="add-cart" data-name="Tailored Pants" data-price="72" type="button">Add To Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="arrivals" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">New Arrivals</h2>
+        <p class="section-subtitle">Freshly dropped essentials and statement outerwear. Limited quantities available.</p>
+        <div class="arrival-strip">
+          <article class="arrival-item">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="New arrival trench coat">
+            <p>Structured Trench</p>
+          </article>
+          <article class="arrival-item">
+            <img src="https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=900&q=80" alt="New arrival layered look">
+            <p>Layered Street Set</p>
+          </article>
+          <article class="arrival-item">
+            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=900&q=80" alt="New arrival minimalist sneakers">
+            <p>Minimal Sneakers</p>
+          </article>
+          <article class="arrival-item">
+            <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=900&q=80" alt="New arrival hoodie">
+            <p>Signature Heavy Hoodie</p>
+          </article>
+        </div>
+
+        <div class="offer reveal">
+          <div>
+            <h3>Get 30% Off First Order</h3>
+            <p>Use code <strong>URBAN30</strong> at checkout. Offer valid for limited time on selected items.</p>
+          </div>
+          <button class="btn secondary" type="button">Claim Offer</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Customer Reviews</h2>
+        <p class="section-subtitle">Social proof that drives confidence. cvs clothes is trusted by thousands of style-conscious shoppers.</p>
+
+        <div class="review-grid">
+          <article class="review">
+            <p class="verified">Verified Buyer</p>
+            <p class="stars">★★★★★</p>
+            <p>"The quality feels premium. Fit is perfect, and shipping was super fast. cvs clothes is now my go-to for everyday style."</p>
+            <h4>- Ayaan R.</h4>
+          </article>
+          <article class="review">
+            <p class="verified">Verified Buyer</p>
+            <p class="stars">★★★★★</p>
+            <p>"Minimal design, amazing fabric, and exactly the clean look I wanted. The site experience also feels premium."</p>
+            <h4>- Sofia M.</h4>
+          </article>
+          <article class="review">
+            <p class="verified">Verified Buyer</p>
+            <p class="stars">★★★★☆</p>
+            <p>"Loved the new arrivals and bundle discounts. Cart and checkout flow is very smooth and easy to use on mobile."</p>
+            <h4>- Daniel K.</h4>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="newsletter-copy">
+            <h3>Join The cvs clothes Club</h3>
+            <p>Get early access to weekly drops, private discounts, and trend edits curated by our stylists.</p>
+          </div>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input id="emailInput" type="email" placeholder="Enter your email" aria-label="Email address" required>
+            <button class="btn" type="submit">Subscribe</button>
+            <p class="form-note" id="newsletterMessage" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-wrap">
+        <div>
+          <h3 class="brand">cvs clothes</h3>
+          <p style="color:#555; margin-top: 10px; max-width: 34ch;">Modern fashion essentials crafted for confidence, comfort, and daily wear.</p>
+        </div>
+        <div>
+          <p class="footer-title">Shop</p>
+          <ul class="footer-list">
+            <li><a href="#featured">Men</a></li>
+            <li><a href="#featured">Women</a></li>
+            <li><a href="#featured">Kids</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Company</p>
+          <ul class="footer-list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Support</p>
+          <ul class="footer-list">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© <span id="year"></span> cvs clothes. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    const addCartButtons = document.querySelectorAll('.add-cart');
+    const cartCount = document.getElementById('cartCount');
+    const cartTotal = document.getElementById('cartTotal');
+    const visibleCount = document.getElementById('visibleCount');
+    const newsletterForm = document.getElementById('newsletterForm');
+    const emailInput = document.getElementById('emailInput');
+    const newsletterMessage = document.getElementById('newsletterMessage');
+    const yearEl = document.getElementById('year');
+
+    let cartItems = [];
+
+    function updateCartCount() {
+      cartCount.textContent = String(cartItems.length);
+      const total = cartItems.reduce((sum, item) => sum + item.price, 0);
+      cartTotal.textContent = '$' + total;
+    }
+
+    function updateVisibleProducts() {
+      const visible = Array.from(productCards).filter((card) => !card.classList.contains('hidden-card')).length;
+      visibleCount.textContent = String(visible);
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const selected = button.dataset.filter;
+
+        filterButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        productCards.forEach((card, index) => {
+          const category = card.dataset.category;
+          const show = selected === 'all' || category === selected;
+
+          if (show) {
+            card.classList.remove('hidden-card');
+            // Staggered fade in improves perceived performance and polish.
+            card.style.animation = 'none';
+            card.offsetHeight;
+            card.style.animation = 'fadeUp 420ms ease ' + (index * 40) + 'ms both';
+          } else {
+            card.classList.add('hidden-card');
+          }
+        });
+
+        updateVisibleProducts();
+      });
+    });
+
+    addCartButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = {
+          name: button.dataset.name,
+          price: Number(button.dataset.price)
+        };
+
+        cartItems.push(item);
+        updateCartCount();
+
+        button.classList.add('added');
+        button.textContent = 'Added';
+
+        setTimeout(() => {
+          button.classList.remove('added');
+          button.textContent = 'Add To Cart';
+        }, 900);
+      });
+    });
+
+    newsletterForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const email = emailInput.value.trim();
+
+      if (!email || !email.includes('@') || !email.includes('.')) {
+        newsletterMessage.textContent = 'Please enter a valid email address.';
+        return;
+      }
+
+      newsletterMessage.textContent = 'Thanks for subscribing. Your welcome code is on its way.';
+      newsletterMessage.style.color = 'var(--success)';
+      newsletterForm.reset();
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    const motionStyle = document.createElement('style');
+    motionStyle.textContent =
+      '@keyframes fadeUp {' +
+      'from { opacity: 0; transform: translateY(10px); }' +
+      'to { opacity: 1; transform: translateY(0); }' +
+      '}';
+    document.head.appendChild(motionStyle);
+
+    yearEl.textContent = new Date().getFullYear();
+    updateCartCount();
+    updateVisibleProducts();
+  </script>
+</body>
+</html>

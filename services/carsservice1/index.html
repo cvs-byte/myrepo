@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cvs cars | cvs cars services</title>
+  <meta name="description" content="cvs cars by cvs cars services - explore premium cars, compare specs, and book your test drive." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="cvs cars home">
+        <span class="brand-main">cvs cars</span>
+        <span class="brand-sub">cvs cars services</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#cars">Cars</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#book">Book Test Drive</a>
+        <a href="../index.html" class="hub-link" title="Back to Design Services Hub">Design Hub</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open navigation">Menu</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Premium Inventory</p>
+        <h1>Own The Road<br />With Confidence.</h1>
+        <p class="hero-text">Explore performance SUVs, electric sedans, and luxury coupes with transparent pricing and detailed specs.</p>
+        <div class="hero-actions">
+          <button id="exploreCarsBtn" class="btn btn-primary">Explore Cars</button>
+          <a class="btn btn-outline" href="#book">Book Test Drive</a>
+        </div>
+      </div>
+      <div class="hero-feature reveal">
+        <img id="heroImage" src="" alt="Featured car" loading="lazy" />
+        <div class="feature-card">
+          <p class="feature-label">Featured Car</p>
+          <h3 id="heroName"></h3>
+          <p id="heroPrice" class="feature-price"></p>
+          <a id="heroDetailsLink" class="feature-link" href="details.html">View Details</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="cars" class="cars-section container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Inventory</p>
+        <h2>Find Your Perfect Drive</h2>
+      </div>
+
+      <div class="filters reveal" role="region" aria-label="Car filters">
+        <div class="filter-group">
+          <label for="typeFilter">Car Type</label>
+          <select id="typeFilter">
+            <option value="all">All Types</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="priceFilter">Max Price</label>
+          <select id="priceFilter">
+            <option value="all">No Limit</option>
+            <option value="35000">$35,000</option>
+            <option value="50000">$50,000</option>
+            <option value="70000">$70,000</option>
+            <option value="90000">$90,000</option>
+          </select>
+        </div>
+        <button id="resetFiltersBtn" class="btn btn-ghost" type="button">Reset</button>
+      </div>
+
+      <div id="carGrid" class="car-grid" aria-live="polite"></div>
+      <p id="emptyState" class="empty-state" hidden>No cars match your filters yet. Try a wider price range.</p>
+    </section>
+
+    <section id="reviews" class="reviews container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Testimonials</p>
+        <h2>Trusted By Car Enthusiasts</h2>
+      </div>
+      <div id="reviewGrid" class="review-grid"></div>
+    </section>
+
+    <section id="book" class="book-section container reveal">
+      <div class="book-copy">
+        <p class="eyebrow">Take The Wheel</p>
+        <h2>Book Your Test Drive</h2>
+        <p>Share your preferred car and timing. Our team from cvs cars services will contact you quickly.</p>
+      </div>
+      <form id="testDriveForm" class="book-form" novalidate>
+        <div class="field">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Your name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="+1 555 0100" required />
+        </div>
+        <div class="field">
+          <label for="carChoice">Preferred Car</label>
+          <select id="carChoice" name="carChoice" required>
+            <option value="">Select a car</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">Preferred Date</label>
+          <input id="date" name="date" type="date" required />
+        </div>
+        <div class="field">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Any requirements or questions?"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>cvs cars - A brand by cvs cars services</p>
+      <p>&copy; 2026 All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="cars-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

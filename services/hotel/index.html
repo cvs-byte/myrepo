@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVS HOTELS | Luxury Hotel & Spa</title>
+    <meta name="description"
+        content="Experience unparalleled luxury at CVSCompanies Hotel. Book your stay at our 5-star hotel featuring premium rooms, world-class spa, and fine dining.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-crown"></i></span>
+                CVSCompanies Hotel
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms & Suites</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+            <a href="../index.html" class="btn btn-hub-link" title="Back to Design Services Hub">
+                <i class="fa-solid fa-th"></i>
+                <span>Design Hub</span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in-up">Discover Pure Elegance</h1>
+            <p class="fade-in-up delay-1">Experience 5-star luxury at the world's most exclusive destination.</p>
+            <a href="#book" class="btn btn-primary fade-in-up delay-2">Reserve Your Stay</a>
+        </div>
+    </header>
+
+    <!-- Booking Form Bar -->
+    <section id="book" class="booking-bar">
+        <div class="container">
+            <form class="booking-form" id="bookingForm">
+                <div class="input-group">
+                    <label for="checkin">Check In</label>
+                    <input type="date" id="checkin" required>
+                </div>
+                <div class="input-group">
+                    <label for="checkout">Check Out</label>
+                    <input type="date" id="checkout" required>
+                </div>
+                <div class="input-group">
+                    <label for="guests">Guests</label>
+                    <select id="guests" required>
+                        <option value="1">1 Guest</option>
+                        <option value="2" selected>2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5+">5+ Guests</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-gold">Check Availability</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="section rooms-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">Luxury Accommodation</span>
+                <h2>Our Premium Rooms & Suites</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="rooms-grid">
+                <!-- Room 1 -->
+                <div class="room-card">
+                    <div class="room-img-container">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80&w=1000"
+                            alt="Deluxe King Room" class="room-img">
+                        <div class="price-tag">From $450/night</div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Deluxe King Room</h3>
+                        <p>A spacious retreat with elegant dark wood furnishings, gold accents, and a plush king-size
+                            bed.</p>
+                        <ul class="room-features">
+                            <li><i class="fa-solid fa-bed"></i> King Bed</li>
+                            <li><i class="fa-solid fa-maximize"></i> 45 m²</li>
+                            <li><i class="fa-solid fa-water"></i> Ocean View</li>
+                        </ul>
+                        <a href="#book" class="btn btn-outline btn-full">Book Room</a>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card">
+                    <div class="room-img-container">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=1000"
+                            alt="Executive Suite" class="room-img">
+                        <div class="price-tag">From $850/night</div>
+                    </div>
+                    <div class="room-info">
+                        <h3>Executive Suite</h3>
+                        <p>Experience the pinnacle of luxury with a separate living area, panoramic views, and exclusive
+                            club access.</p>
+                        <ul class="room-features">
+                            <li><i class="fa-solid fa-bed"></i> King Bed</li>
+                            <li><i class="fa-solid fa-maximize"></i> 85 m²</li>
+                            <li><i class="fa-solid fa-martini-glass"></i> Mini Bar</li>
+                        </ul>
+                        <a href="#book" class="btn btn-outline btn-full">Book Suite</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="section amenities-section bg-darker">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">World-Class Facilities</span>
+                <h2>Resort Amenities</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <div class="amenity-icon"><i class="fa-solid fa-wifi"></i></div>
+                    <h3>High-Speed WiFi</h3>
+                    <p>Stay connected with complimentary high-speed internet throughout the resort.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon"><i class="fa-solid fa-person-swimming"></i></div>
+                    <h3>Infinity Pool</h3>
+                    <p>Relax in our temperature-controlled infinity pool overlooking the ocean.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon"><i class="fa-solid fa-spa"></i></div>
+                    <h3>Luxury Spa</h3>
+                    <p>Rejuvenate your body and mind with our award-winning spa treatments.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h3>Fine Dining</h3>
+                    <p>Savor exquisite culinary creations at our Michelin-starred restaurant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="reviews" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">Guest Experiences</span>
+                <h2>What Our Guests Say</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="testimonial-slider-container">
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <div class="testimonial-slide active">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Absolutely breathtaking. The attention to detail, the dark and gold
+                            decor, and the impeccable service made our anniversary unforgettable. Truly a 5-star
+                            experience."</p>
+                        <div class="guest-info">
+                            <h4>Eleanor Vance</h4>
+                            <span>New York, USA</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"The CVSCompanies Hotel exceeds all expectations. The infinity pool at
+                            sunset is mesmerizing, and the culinary offerings are out of this world."</p>
+                        <div class="guest-info">
+                            <h4>James Sterling</h4>
+                            <span>London, UK</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button id="prevBtn" class="slider-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button id="nextBtn" class="slider-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallery" class="section gallery-section bg-darker">
+        <div class="container-fluid">
+            <div class="section-header text-center">
+                <span class="subtitle">Visual Journey</span>
+                <h2>Resort Gallery</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=1000"
+                        alt="Spa Treatment Room">
+                    <div class="gallery-overlay"><span>Tranquil Spa</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=1000"
+                        alt="Fine Dining">
+                    <div class="gallery-overlay"><span>Gourmet Dining</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1000"
+                        alt="Resort Lounge">
+                    <div class="gallery-overlay"><span>Elegant Lounges</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80&w=1000"
+                        alt="Ocean View">
+                    <div class="gallery-overlay"><span>Oceanfront Views</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-crown"></i></span>
+                    CVSCompanies Hotel
+                </a>
+                <p>Where luxury meets tranquility. Experience the extraordinary at CVSCompanies Hotel.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#rooms">Rooms & Suites</a></li>
+                    <li><a href="#amenities">Amenities</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#book">Special Offers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Paradise Blvd, Tropicana</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (800) 123-4567</p>
+                <p><i class="fa-solid fa-envelope"></i> reservations@royalpalm.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CVSCompanies Hotel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
